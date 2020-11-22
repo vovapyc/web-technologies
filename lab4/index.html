@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <title>Лабораторна робота номер 4</title>
+    <title>Лабораторна робота 4</title>
 </head>
 <body>
 <main class="container">
     <div class="columns">
         <div class="column">
-            <div ng-controller='ShoppingListController1 as list'>
+            <div ng-controller='ShoppingListController as list'>
                 <h3 class="is-size-4 has-text-weight-bold">Shopping list:</h3>
                 <ol>
                     <li ng-repeat="item in list.items">
                         Buy {{item.name}}({{item.quantity}})
-                        <button ng-click="list.removeItem($index);">Buy</button>
+                        <button ng-click="list.buyItem($index);">Buy</button>
                     </li>
                 </ol>
             </div>
         </div>
         <div class="column">
-            <div ng-controller='ShoppingListController2 as list'>
+            <div ng-controller='BoughtShoppingListController as list'>
                 <h3 class="is-size-4 has-text-weight-bold">Bought:</h3>
                 <ol>
                     <li ng-repeat="item in list.items">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
 </main>
 </div>
 </body>

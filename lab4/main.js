@@ -4,13 +4,13 @@
     var shoppingListObj = new ShoppingListService();
 
     angular.module('ControllerAsApp', [])
-        .controller('ShoppingListController1', ShoppingListController1)
-        .controller('ShoppingListController2', ShoppingListController2)
+        .controller('ShoppingListController', ShoppingListController)
+        .controller('BoughtShoppingListController', BoughtShoppingListController)
         .factory('ShoppingListFactory', ShoppingListFactory);
 
-    ShoppingListController1.$inject = ['ShoppingListFactory'];
+    ShoppingListController.$inject = ['ShoppingListFactory'];
 
-    function ShoppingListController1(ShoppingListFactory) {
+    function ShoppingListController(ShoppingListFactory) {
         var list = this;
         var shoppingList = ShoppingListFactory();
 
@@ -20,9 +20,9 @@
         };
     }
 
-    ShoppingListController2.$inject = ['ShoppingListFactory'];
+    BoughtShoppingListController.$inject = ['ShoppingListFactory'];
 
-    function ShoppingListController2(ShoppingListFactory) {
+    function BoughtShoppingListController(ShoppingListFactory) {
         var list = this;
 
         var shoppingList = ShoppingListFactory();
