@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Лабораторна робота 3</title>
+</head>
+<body>
+<main class="container mt-5 box" ng-controller="AppController">
+    <div class="field is-horizontal">
+        <div class="field-label is-normal">
+            <label class="label">Введіть сніданок:</label>
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <p class="control">
+                    <input ng-model="list" class="input">
+                </p>
+            </div>
+            <button class="button" ng-click="showAnswer()">Чи не забагато?</button>
+        </div>
+    </div>
+
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+            <div class="text" align="center">{{text}}</div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
