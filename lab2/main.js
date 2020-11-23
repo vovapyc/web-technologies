@@ -9,6 +9,6 @@ function calculateHypotenuse() {
         )
         document.getElementById("result").innerText = "Катет: " + hypotenuse
     } else {
-        alert("Ви помилились під час введення значення.\n Або ви ввели занадто велике значення катета \nПеревірте їх та повторіть спробу.");
+        alert("Ви помилились під час введення значення");
     }
 }
